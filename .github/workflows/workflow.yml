@@ -9,3 +9,5 @@ jobs:
   build:
     runs-on: ububuntu-latest
     container: python:3.9-slim
+    steps:
+    - run: echo "action is running"
