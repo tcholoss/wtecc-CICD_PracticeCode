@@ -1,6 +1,14 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: <place-name-here>
+  name: hallowelt
 spec:
+  params:
+    - name: massage
+      description: The massage to ekko
+      type: string
   steps:
+    - name: ekko
+      image: alpine:3
+      command: [/bin/echo]
+      args: ["$(params.massage)"]
