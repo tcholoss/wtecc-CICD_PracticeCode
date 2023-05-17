@@ -1,6 +1,15 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:  
-  name: <place-name-here>
+  name: pipeschlange
 spec:
+  params:
+    - name: massage
   tasks:
+    - name: hallo
+      taskRef:
+        name: ekko
+      params:
+        - name: massage
+          value: "$(params.massage)"
+          
