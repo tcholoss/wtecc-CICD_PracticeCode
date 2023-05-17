@@ -1,0 +1,11 @@
+---
+name: testflow
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+jobs:
+  build:
+    runs-on: ububuntu-latest
+    container: python:3.9-slim
